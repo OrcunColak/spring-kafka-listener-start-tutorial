@@ -1,2 +1,4 @@
 # Project exclude paths
 /target/
+/spring-kafka-listener-start-tutorial.iml
+/.idea/
