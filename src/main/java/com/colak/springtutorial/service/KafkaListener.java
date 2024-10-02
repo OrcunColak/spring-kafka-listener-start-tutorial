@@ -1,9 +1,8 @@
-package com.colak.springkafkaembeddedtesttutorial.service;
+package com.colak.springtutorial.service;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -12,11 +11,11 @@ import java.util.List;
 
 @Getter
 @Slf4j
-public class KafkaConsumer {
+public class KafkaListener {
 
     public static final String CONSUMER_ID = "consumer1";
 
-    @KafkaListener(id = CONSUMER_ID,
+    @org.springframework.kafka.annotation.KafkaListener(id = CONSUMER_ID,
             topics = "topic1",
             groupId = "group1",
             autoStartup = "false",
